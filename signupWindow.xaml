@@ -1,0 +1,32 @@
+﻿<Window x:Class="Hotel.signupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Inscription Administrateur" Height="500" Width="800"
+        Background="#F5F5F5">
+    <Grid>
+        <!-- Title Fields -->
+        <TextBox x:Name="NomTextBox" Width="200" Margin="10,10,10,10" 
+                 Text="Nom" Foreground="Gray"/>
+        <TextBox x:Name="PrenomTextBox" Width="200" Margin="10,50,10,10" 
+                 Text="Prénom" Foreground="Gray"/>
+        <TextBox x:Name="EmailTextBox" Width="200" Margin="10,90,10,10" 
+                 Text="Email" Foreground="Gray"/>
+        <TextBox x:Name="TelephoneTextBox" Width="200" Margin="10,130,10,10" 
+                 Text="Téléphone" Foreground="Gray"/>
+
+        <!-- PasswordBox with placeholder -->
+        <PasswordBox x:Name="PasswordBox" Width="200" Height="30" VerticalAlignment="Top" 
+             Margin="300,157,300,0"/>
+        <TextBlock x:Name="PasswordPlaceholder" Text="Mot de passe" Foreground="Gray" VerticalAlignment="Top"
+           HorizontalAlignment="Left" Margin="300,164,0,0" IsHitTestVisible="False" />
+
+
+        <!-- Signup Button -->
+        <Button Content="S'inscrire" Width="150" Height="40"
+                HorizontalAlignment="Center" VerticalAlignment="Top"
+                Margin="0,210,0,0" FontSize="14" FontWeight="Bold"
+                Background="#4CAF50" Foreground="White" BorderThickness="0"
+                Click="SignupButton_Click">
+        </Button>
+    </Grid>
+</Window>

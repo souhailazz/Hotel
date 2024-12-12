@@ -1,0 +1,65 @@
+﻿<Window x:Class="Hotel.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Dashboard Administrateur" Height="600" Width="800" Background="#F4F4F9">
+    <Window.Resources>
+        <!-- Button Style for consistency -->
+        <Style x:Key="MainButtonStyle" TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Background" Value="#007ACC"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Width" Value="250"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Header Section -->
+        <DockPanel Height="60" Background="#3E4E5E" VerticalAlignment="Top">
+            <TextBlock Text="Dashboard Administrateur" Foreground="White" FontSize="22"
+                       VerticalAlignment="Center" Margin="20,0,0,0" FontWeight="Bold"/>
+            <Button Content="Déconnexion" Width="120" Height="30" 
+                    Margin="0,15,20,0" HorizontalAlignment="Right" VerticalAlignment="Center" DockPanel.Dock="Right"
+                    Background="#F44336" Foreground="White" BorderThickness="0" Click="Logout_Click" />
+        </DockPanel>
+
+        <!-- Main Content -->
+        <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center" Orientation="Vertical" Margin="0,94,0,0">
+            <!-- Client Management Button -->
+            <Button Content="Gestion des Clients" Style="{StaticResource MainButtonStyle}" Background="#007ACC" Click="GestionClients_Click" Margin="0,10"/>
+
+            <!-- Employee Management Button -->
+            <Button Content="Gestion des Employés" Style="{StaticResource MainButtonStyle}" Background="#4CAF50" Click="GestionEmployes_Click" Margin="0,10"/>
+
+            <!-- Room Type Management Button -->
+            <Button Content="Gestion des Types de Chambres" Style="{StaticResource MainButtonStyle}" Background="#FFC107" Click="GestionTypesChambres_Click" Margin="0,10"/>
+
+            <!-- Reservation Management Button -->
+            <Button Content="Gestion des Réservations" Style="{StaticResource MainButtonStyle}" Background="#E91E63" Click="GestionReservations_Click" Margin="0,10"/>
+
+            <!-- Payment Management Button -->
+            <Button Content="Gestion des Paiements" Style="{StaticResource MainButtonStyle}" Background="#9C27B0" Click="GestionPaiements_Click" Margin="0,10"/>
+
+            <!-- Data Export/Import Button -->
+            <Button Content="Export/Import des Données" Style="{StaticResource MainButtonStyle}" Background="#795548" Click="ExportImport_Click" Margin="0,10"/>
+
+            <!-- PDF Generation Button -->
+            <Button Content="Générer PDF" Style="{StaticResource MainButtonStyle}" Background="#3E2723" Width="350" Click="GeneratePDF_Click" Margin="0,10"/>
+
+            <!-- Email Notification Button -->
+            <Button Content="Notifications Email" Style="{StaticResource MainButtonStyle}" Background="#607D8B" Width="350" Click="EmailNotifications_Click" Margin="0,10"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
